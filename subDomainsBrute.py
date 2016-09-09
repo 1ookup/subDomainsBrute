@@ -26,7 +26,7 @@ class DNSBrute:
         self._load_dns_servers()
         self._load_sub_names()
         self._load_next_sub()
-        outfile = target + '.txt' if not output else output
+        outfile = "output/" + target + '.txt' if not output else output
         self.outfile = open(outfile, 'w')   # won't close manually
         self.ip_dict = {}
         self.STOP_ME = False
@@ -161,19 +161,38 @@ if __name__ == '__main__':
               help='Ignore domains pointed to private IPs')
     parser.add_option('-o', '--output', dest='output', default=None,
               type='string', help='Output file name. default is {target}.txt')
+    parser.add_option('-l', '--domains', dest='domains_file', default='',
+              type='string', help='domain list')
+    parser.add_option('-d', '--domain', dest='domains', default='',
+              type='string', help='domain')
+
 
     (options, args) = parser.parse_args()
+    """
     if len(args) < 1:
         parser.print_help()
         sys.exit(0)
+    """
+    if options.domains == "" and options.domains_file == "":
+        parser.print_help()
+        sys.exit()
+    if options.domains != "":
+        targets = [options.domains]
+    else:
+        targets = []
+        for line in open(options.domains_file).readlines():
+            targets.append(line.strip())
 
-    d = DNSBrute(target=args[0], names_file=options.names_file,
-                 ignore_intranet=options.i,
-                 threads_num=options.threads_num,
-                 output=options.output)
-    d.run()
-    while threading.activeCount() > 1:
-        time.sleep(0.1)
+    #targets = ["nyist.edu.cn", "lanou3g.com", "jingyingba.com"]
+    #targets = [args[0]]
+    for target in targets:
+        d = DNSBrute(target=target, names_file=options.names_file,
+                     ignore_intranet=options.i,
+                     threads_num=options.threads_num,
+                     output=options.output)
+        d.run()
+        while threading.activeCount() > 1:
+            time.sleep(0.1)
 
 
 """

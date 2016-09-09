@@ -1,0 +1,5 @@
+www.jingyingba.com            	115.28.100.222
+m.jingyingba.com              	115.28.167.150
+test.jingyingba.com           	115.28.100.222
+i.jingyingba.com              	115.28.167.150
+mail.jingyingba.com           	183.60.15.173, 14.17.42.118
