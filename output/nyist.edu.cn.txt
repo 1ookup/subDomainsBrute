@@ -1,9 +1,0 @@
-www.nyist.edu.cn              	222.139.215.198
-www1.nyist.edu.cn             	222.139.215.208
-my.nyist.edu.cn               	59.69.128.47
-mail.nyist.edu.cn             	59.69.128.9
-dns.nyist.edu.cn              	59.69.128.8
-soft.nyist.edu.cn             	222.139.215.198
-tv.nyist.edu.cn               	172.31.31.66
-rt.nyist.edu.cn               	222.139.215.236
-cas.nyist.edu.cn              	59.69.128.45

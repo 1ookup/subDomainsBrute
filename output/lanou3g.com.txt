@@ -1,8 +1,0 @@
-www.lanou3g.com               	182.92.190.143
-m.lanou3g.com                 	182.92.190.143
-mail.lanou3g.com              	112.90.77.178, 112.90.78.157
-oa.lanou3g.com                	115.28.167.150
-docs.lanou3g.com              	115.28.167.150
-wx.lanou3g.com                	123.57.74.213
-project.lanou3g.com           	115.28.227.1
-weixin.lanou3g.com            	115.28.100.222
